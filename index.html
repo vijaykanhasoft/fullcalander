@@ -1,0 +1,251 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Kanhasoft Full calander Demo</title>
+    <link href='http://fonts.googleapis.com/css?family=RobotoDraft:300,400,400italic,500,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,400italic,600,700' rel='stylesheet' type='text/css'>
+
+    <!--[if lt IE 10]>
+        <script type="text/javascript" src="assets/js/media.match.min.js"></script>
+        <script type="text/javascript" src="assets/js/placeholder.min.js"></script>
+    <![endif]-->
+
+    <link type="text/css" href="assets/fonts/font-awesome/css/font-awesome.min.css" rel="stylesheet">        <!-- Font Awesome -->
+    <link type="text/css" href="assets/css/styles.css" rel="stylesheet">                                     <!-- Core CSS with all styles -->
+	<link type="text/css" href="assets/plugins/form-daterangepicker/daterangepicker-bs3.css" rel="stylesheet"> 	<!-- DateRangePicker -->
+	<link type="text/css" href="assets/plugins/fullcalendar/fullcalendar.css" rel="stylesheet"> 					<!-- FullCalendar -->
+	<link type="text/css" href="assets/plugins/colorpicker/colorPicker.css" rel="stylesheet"> 					<!-- FullCalendar -->
+	
+    </head>
+
+    <body class="infobar-offcanvas">
+        
+        <div id="headerbar">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-xs-6 col-sm-2">
+				<a href="#" class="shortcut-tile tile-brown">
+					<div class="tile-body">
+						<div class="pull-left"><i class="fa fa-pencil"></i></div>
+					</div>
+					<div class="tile-footer">
+						Create Post
+					</div>
+				</a>
+			</div>
+			<div class="col-xs-6 col-sm-2">
+				<a href="#" class="shortcut-tile tile-grape">
+					<div class="tile-body">
+						<div class="pull-left"><i class="fa fa-group"></i></div>
+						<div class="pull-right"><span class="badge">2</span></div>
+					</div>
+					<div class="tile-footer">
+						Contacts
+					</div>
+				</a>
+			</div>
+			<div class="col-xs-6 col-sm-2">
+				<a href="#" class="shortcut-tile tile-primary">
+					<div class="tile-body">
+						<div class="pull-left"><i class="fa fa-envelope-o"></i></div>
+						<div class="pull-right"><span class="badge">10</span></div>
+					</div>
+					<div class="tile-footer">
+						Messages
+					</div>
+				</a>
+			</div>
+			<div class="col-xs-6 col-sm-2">
+				<a href="#" class="shortcut-tile tile-inverse">
+					<div class="tile-body">
+						<div class="pull-left"><i class="fa fa-camera"></i></div>
+						<div class="pull-right"><span class="badge">3</span></div>
+					</div>
+					<div class="tile-footer">
+						Gallery
+					</div>
+				</a>
+			</div>
+
+			<div class="col-xs-6 col-sm-2">
+				<a href="#" class="shortcut-tile tile-midnightblue">
+					<div class="tile-body">
+						<div class="pull-left"><i class="fa fa-cog"></i></div>
+					</div>
+					<div class="tile-footer">
+						Settings
+					</div>
+				</a>
+			</div>
+			<div class="col-xs-6 col-sm-2">
+				<a href="#" class="shortcut-tile tile-orange">
+					<div class="tile-body">
+						<div class="pull-left"><i class="fa fa-wrench"></i></div>
+					</div>
+					<div class="tile-footer">
+						Plugins
+					</div>
+				</a>
+			</div>
+		</div>
+	</div>
+</div>
+        <div id="wrapper">
+            <div id="layout-static"> 
+                <div class="static-content-wrapper">
+                    <div class="static-content">
+                        <div class="page-content">
+                            <div class="page-heading">            
+                                <h1>Task & Events</h1>
+                                <div class="options">
+								</div>
+                            </div>
+                            <div class="container-fluid">
+                                
+
+	<div data-widget-group="group1">   
+
+		<div class="row"> 
+	 
+	<div class="col-md-12">
+		<div class="panel panel-primary">
+			<div class="panel-heading">
+				<h2>Calendar with User specific Tasks/Events.</h2>
+			</div>
+			<div class="panel-body">
+				<div class="row">
+					<form class="form-horizontal" id="form_settings" name="form_setting">  
+                    <div id='external-events' style="overflow-y: auto;" class="col-sm-3">
+                	
+					<!-- MAIN USER WITH ID 1 -->
+                	<div class="panel panel-default">
+						<div class="panel-heading">
+							<h2>Show My Calendar</h2>
+						</div>
+						<div class="panel-body panel-no-padding">
+								<div class="main_user"></div>
+						</div>
+					</div>
+
+					<!-- FOR EXECUTIVE -->
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h2>Executive</h2>
+						</div>
+						<div class="panel-body panel-no-padding">
+								 <div class="form-group">
+                                    <label class="col-sm-5">
+                                        &nbsp;</label>
+                                    <label class="col-md-3">
+                                        <em>Events</em></label>
+                                    <label class="col-md-3">
+                                        <em>Tasks</em></label>
+                                </div>
+                               <div class="executive_list"></div> 
+						</div>
+					</div>
+	
+					<!-- FOR MANAGER -->
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h2>Manager</h2>
+						</div>
+						<div class="panel-body panel-no-padding">
+								 <div class="form-group">
+                                    <label class="col-sm-5">
+                                        &nbsp;</label>
+                                    <label class="col-md-3">
+                                        <em>Events</em></label>
+                                    <label class="col-md-3">
+                                        <em>Tasks</em></label>
+                                </div>
+                               <div class="manager_list"></div> 
+						</div>
+					</div>
+
+					<!-- FOR BASIC USER -->
+		
+				    <div class="panel panel-default">
+						<div class="panel-heading">
+							<h2>Basic User</h2>
+						</div>
+						<div class="panel-body panel-no-padding">
+								 <div class="form-group">
+                                    <label class="col-sm-5">
+                                        &nbsp;</label>
+                                    <label class="col-md-3">
+                                        <em>Events</em></label>
+                                    <label class="col-md-3">
+                                        <em>Tasks</em></label>
+                                </div>
+                               <div class="basic_user_list"></div> 
+						</div>
+					</div>
+
+
+                    </div>
+                    <input type="hidden" name="user_id" value="1">
+                    </form>
+
+                    <div id='calendar-external' class="col-sm-9"></div>
+                </div>
+			</div>
+		</div>
+	</div>
+</div>
+
+	</div>
+
+
+                            </div> <!-- .container-fluid -->
+                        </div> <!-- #page-content -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="infobar-wrapper scroll-pane">
+            <div class="infobar scroll-content">
+</div>
+        </div>
+    <!-- Load site level scripts -->
+
+<!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js"></script> -->
+
+<script type="text/javascript" src="assets/js/jquery-1.10.2.min.js"></script> 							<!-- Load jQuery -->
+<script type="text/javascript" src="assets/js/jqueryui-1.9.2.min.js"></script> 							<!-- Load jQueryUI -->
+
+
+<script>
+	
+	$.ajaxSetup({
+            headers: {'timezone': Intl.DateTimeFormat().resolvedOptions().timeZone},
+            error: function(jqXHR, textStatus, errorThrown) {
+            }
+        });
+
+
+</script>
+
+<script type="text/javascript" src="assets/js/bootstrap.min.js"></script> 								<!-- Load Bootstrap -->
+
+<script type="text/javascript" src="assets/plugins/colorpicker/jquery.colorPicker.js"></script>   <!-- Calendar Plugin -->
+    
+<script type="text/javascript" src="assets/plugins/fullcalendar/moment.js"></script>              	<!-- Moment.js for Date Range Picker -->
+
+<script type="text/javascript" src="assets/plugins/bootstrap-datepicker/bootstrap-datepicker.js"></script>      			<!-- Datepicker -->
+
+<script type="text/javascript" src="assets/plugins/fullcalendar/fullcalendar.js"></script>   <!-- Calendar Plugin -->
+
+<script type="text/javascript" src="assets/plugins/templates/jquery.tmpl.js"></script>   <!-- Calendar Plugin -->
+
+<script type="text/javascript" src="assets/demo/demo-calendar.js"></script>
+							<!-- Initialize scripts for this page-->
+
+</body>
+
+</html>
